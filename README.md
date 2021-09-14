@@ -121,6 +121,3 @@ Feedstock Maintainers
 
 * [@adriendelsalle](https://github.com/adriendelsalle/)
 
-
-<!-- dummy commit to enable rerendering -->
-
