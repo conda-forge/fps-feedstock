@@ -1,7 +1,7 @@
 About fps
 =========
 
-Home: https://github.com/adriendelsalle/fps
+Home: https://github.com/jupyter-server/fps
 
 Package license: BSD-3-Clause
 
@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fps-feedstock/b
 
 Summary: A fast plugins server
 
-Development: https://github.com/adriendelsalle/fps
+Development: https://github.com/jupyter-server/fps
 
-A fast plugin server based on fastAPI, uvicorn and pluggy, providing a composable way to build a web-server
+A fast plugin server based on fastAPI and pluggy, providing a composable way to build a web-server
 
 Current build status
 ====================
@@ -120,5 +120,4 @@ Feedstock Maintainers
 =====================
 
 * [@adriendelsalle](https://github.com/adriendelsalle/)
-
 
