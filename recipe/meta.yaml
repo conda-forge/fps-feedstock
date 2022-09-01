@@ -1,13 +1,13 @@
 {% set name = "fps" %}
-{% set version = "0.0.9" %}
+{% set version = "0.0.19" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/jupyter-server/fps/archive/fps-{{ version }}.tar.gz
-  sha256: b1624df4c9c0923ecddaff3679bb45e407abdeee68076ead47b065921adcc7bc
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: c81ee8daff7de11d304626853adb6a251c8d6ad1b5916bb6397b4cd94b5d7945
 
 build:
   noarch: python
@@ -23,7 +23,8 @@ requirements:
     - fastapi
     - pluggy >=1.0.0,<2.0.0
     - toml
-    - click
+    - typer
+    - rich
 
 test:
   imports:
@@ -31,8 +32,8 @@ test:
 
 about:
   home: https://github.com/jupyter-server/fps
-  summary: A fast plugins server
-  description: A fast plugin server based on fastAPI and pluggy, providing a composable way to build a web-server
+  summary: A fast plugin server
+  description: A fast plugin server based on FastAPI and pluggy, providing a composable way to build a web-server
   keywords: asgi, server, fastapi, pluggy, plugins
   dev_url: https://github.com/jupyter-server/fps
   license_file: LICENSE
@@ -42,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - adriendelsalle
+    - davidbrochart
