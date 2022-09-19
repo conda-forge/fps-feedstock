@@ -1,5 +1,5 @@
 {% set name = "fps" %}
-{% set version = "0.0.19" %}
+{% set version = "0.0.20" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,18 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c81ee8daff7de11d304626853adb6a251c8d6ad1b5916bb6397b4cd94b5d7945
+  sha256: 04711430a66b929112bc8bb4596dcf6fe6321998a4ece9b5cae603894d8bb5a6
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
     - python >=3.7
     - pip
+    - hatchling
   run:
     - python >=3.7
     - fastapi
