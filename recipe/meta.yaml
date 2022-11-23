@@ -1,5 +1,5 @@
 {% set name = "fps" %}
-{% set version = "0.0.20" %}
+{% set version = "0.0.21" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 04711430a66b929112bc8bb4596dcf6fe6321998a4ece9b5cae603894d8bb5a6
+  sha256: 93d908c8b518b14879f1128f467834311ad1ae546ca6e49b47d72d0aa00f22f6
 
 build:
   noarch: python
