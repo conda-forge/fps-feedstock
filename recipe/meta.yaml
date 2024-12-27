@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 93d908c8b518b14879f1128f467834311ad1ae546ca6e49b47d72d0aa00f22f6
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - fastapi
     - pluggy >=1.0.0,<2.0.0
     - toml
@@ -28,6 +28,8 @@ requirements:
     - rich
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - fps
 
