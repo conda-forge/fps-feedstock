@@ -13,29 +13,40 @@ build:
   noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  entry_points:
+    - fps = fps._cli:main
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.7
+    - python >={{ python_min }}
+    - anyio
+    - anyioutils >=0.4.9
+    - click >=8.1.8,<9
+    - structlog
+    - exceptiongroup
+    - importlib_metadata
     - fastapi
-    - pluggy >=1.0.0,<2.0.0
-    - toml
-    - typer
-    - rich
+    - anycorn
 
 test:
   imports:
     - fps
+    - fps.web.FastAPIModule
+  commands:
+    - pip check
+    - fps --help
+  requires:
+    - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jupyter-server/fps
-  summary: A fast plugin server
-  description: A fast plugin server based on FastAPI and pluggy, providing a composable way to build a web-server
-  keywords: asgi, server, fastapi, pluggy, plugins
+  summary: Fast Pluggable System
+  description: A system for creating modular, configurable, pluggable and concurrent applications
   dev_url: https://github.com/jupyter-server/fps
   license_file: LICENSE
   license: BSD-3-Clause
