@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >=3.9
     - pip
     - hatchling
   run:
-    - python >={{ python_min }}
+    - python >=3.9
     - anyio
     - anyioutils >=0.4.9
     - click >=8.1.8,<9
@@ -41,7 +41,7 @@ test:
     - fps --help
   requires:
     - pip
-    - python {{ python_min }}
+    - python >=3.9
 
 about:
   home: https://github.com/jupyter-server/fps
