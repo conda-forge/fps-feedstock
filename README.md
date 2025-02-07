@@ -7,11 +7,11 @@ Home: https://github.com/jupyter-server/fps
 
 Package license: BSD-3-Clause
 
-Summary: A fast plugin server
+Summary: Fast Pluggable System
 
 Development: https://github.com/jupyter-server/fps
 
-A fast plugin server based on FastAPI and pluggy, providing a composable way to build a web-server
+A system for creating modular, configurable, pluggable and concurrent applications
 
 Current build status
 ====================
