@@ -1,5 +1,6 @@
 {% set name = "fps" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0fa0f407cb23f0dc4623a68567bc106b82789890627ee84077efe027e0f86548
+  sha256: 98c4a6bc72970619a969f7fc6aa94f492fd3954dbe0327df2586565ab29d2189
 
 build:
   noarch: python
@@ -18,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - anyio
     - anyioutils >=0.4.9
     - click >=8.1.8,<9
@@ -41,13 +42,14 @@ test:
     - fps --help
   requires:
     - pip
-    - python >=3.9
+    - python >={{ python_min }}
 
 about:
   home: https://github.com/jupyter-server/fps
   summary: Fast Pluggable System
   description: A system for creating modular, configurable, pluggable and concurrent applications
   dev_url: https://github.com/jupyter-server/fps
+  doc_url: https://jupyter-server.github.io/fps
   license_file: LICENSE
   license: BSD-3-Clause
   license_family: BSD
