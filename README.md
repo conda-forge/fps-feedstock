@@ -11,6 +11,8 @@ Summary: Fast Pluggable System
 
 Development: https://github.com/jupyter-server/fps
 
+Documentation: https://jupyter-server.github.io/fps
+
 A system for creating modular, configurable, pluggable and concurrent applications
 
 Current build status
