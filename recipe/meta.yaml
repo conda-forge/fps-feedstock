@@ -25,7 +25,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - anyio
-    - anyioutils >=0.6.6,<0.7.0
+    - anyioutils >=0.7.0,<0.8.0
     - click >=8.1.8,<9
     - structlog
     - exceptiongroup
