@@ -15,7 +15,7 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
-    - fps = fps._cli:main
+    - fps = fps.cli._cli:main
 
 requirements:
   host:
@@ -26,20 +26,15 @@ requirements:
     - python >={{ python_min }}
     - anyio
     - anyioutils >=0.7.0,<0.8.0
-    - click >=8.1.8,<9
     - structlog
     - exceptiongroup
-    - importlib_metadata
-    - fastapi
-    - anycorn >=0.18.1,<0.19.0
+    - importlib_metadata >=3.6
 
 test:
   imports:
     - fps
-    - fps.web
   commands:
     - pip check
-    - fps --help
   requires:
     - pip
     - python {{ python_min }}
