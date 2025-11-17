@@ -1,6 +1,6 @@
 {% set name = "fps" %}
 {% set version = "0.5.3" %}
-{% set python_min = "3.9" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -28,7 +28,7 @@ requirements:
     - anyioutils >=0.7.0,<0.8.0
     - structlog
     - exceptiongroup
-    - importlib_metadata >=3.6
+    - importlib-metadata >=3.6
 
 test:
   imports:
