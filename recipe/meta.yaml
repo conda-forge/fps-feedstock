@@ -1,5 +1,5 @@
 {% set name = "fps" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a0f7c16d1d0f75ec4d875234b4baf0ae2a178bd4bd6d0c2a657ff4cea2f49a1a
+  sha256: a70a07c96167eeb6742fb245c81a3a1b855d6441996a47078b7d07e16f1caa61
 
 build:
   noarch: python
