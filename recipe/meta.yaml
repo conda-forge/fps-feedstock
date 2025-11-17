@@ -28,7 +28,6 @@ requirements:
     - anyioutils >=0.7.0,<0.8.0
     - structlog
     - exceptiongroup
-    - importlib-metadata >=3.6
 
 test:
   imports:
