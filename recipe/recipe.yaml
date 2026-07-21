@@ -31,7 +31,7 @@ requirements:
     - structlog
     - exceptiongroup
 
-test:
+tests:
   - python
       imports: fps
       pip_check: true
