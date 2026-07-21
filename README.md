@@ -3,17 +3,13 @@ About fps-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fps-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jupyter-server/fps
+Home: https://jupyter-server.github.io/fps
 
 Package license: BSD-3-Clause
 
-Summary: Fast Pluggable System
+Summary: A system for creating modular, configurable, pluggable and concurrent applications.
 
 Development: https://github.com/jupyter-server/fps
-
-Documentation: https://jupyter-server.github.io/fps
-
-A system for creating modular, configurable, pluggable and concurrent applications
 
 Current build status
 ====================
