@@ -35,7 +35,9 @@ tests:
   - python:
       imports: fps
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: A system for creating modular, configurable, pluggable and concurrent applications.
